@@ -1,0 +1,175 @@
+:root {
+    --bg: #0d0d0d;
+    --fontcolor: #ffdd57;;
+    --font: Arial, sans-serif;
+    --fontsize: 1.3em;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    color: var(--fontcolor);
+    background-color: var(--bg);
+    font-family: var(--font);
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;       
+    gap: 20px;             
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.section {
+    flex: 1 1 calc(33.33% - 20px);
+    padding: 20px;
+    /* background-color: #333; */
+    color: white;
+    border-radius: 8px;
+}
+
+.heading {
+    margin: 10px;
+    font-size: var(--fontsize);
+    text-align: center;
+    font-weight: 700;
+    height: 70px;
+}
+
+img {
+    width: 350px;
+    height: 350px;    
+    border-radius: 8px;  
+    /* overflow: hidden; */
+}   
+
+img:hover{
+    scale: 1.02;
+    transition: 0.8s;
+}
+
+.cryptoCard {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.features {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px;
+    background-color: #111;
+}
+
+.feature-item {
+    width: 30%;
+    text-align: center;
+    color: #f1c40f;
+}
+
+.feature-item i {
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+.feature-item h3 {
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+.feature-item p {
+    color: #bbb;
+}
+
+.social {
+    /* background-color: ; */
+    padding: 20px;
+    margin: 50px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.social h3 {
+    margin: 0 0 10px;
+    font-size: 1.2em;
+    color: #bbb;
+}
+
+.social .social-links {
+    gap: 30px;
+}
+
+.social .social-links .social-link {
+    display: flex;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    gap: 8px;
+}
+
+.social .social-links .social-link svg {
+    width: 35px;
+    height: 35px;
+    fill: var(--fontcolor);
+    transition: transform 0.2s;
+}
+
+.social .social-links .social-link:hover svg{
+    transform: scale(1.1);
+}
+
+
+@media (min-width: 800px) {
+    .cryptoCard, .features {
+        display: flex;
+        flex-direction: wrap;
+    }
+
+}  
+
+@media (max-width: 768px) {
+    .section {
+      flex: 1 1 calc(50% - 20px);  /* Two items per row */
+    }
+}
+
+@media (min-width: 600px) {
+    img {
+        min-width: 100%;
+        height: auto;
+        margin: 1% 1%;
+    }
+    .heading {
+        display: flex;
+        flex-direction: column; 
+        justify-content: center;
+        margin: 10px;
+        font-size: var(--fontsize);
+        text-align: center;
+        font-weight: 700;
+        height: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    .section {
+      flex: 1 1 100%;  /* One item per row */
+    }
+    img {
+        min-width: 95%;
+        height: auto;
+        margin: 1% 1%;
+    }
+}
